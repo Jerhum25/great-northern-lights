@@ -221,6 +221,7 @@ body footer ul li a {
 
 @media screen and (max-width: 768px) {
   body .background-responsive {
+    display: block;
     background-color: rgba(0, 0, 0, 0.4);
     width: 100svw;
     height: 100%;
