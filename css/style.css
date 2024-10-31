@@ -19,8 +19,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+}
+body .background-responsive {
+  display: none;
 }
 body header {
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -78,6 +83,7 @@ body header .menu-droite ul li:nth-child(2) {
 body main {
   display: flex;
   justify-content: space-between;
+  z-index: 10;
 }
 body main .gauche {
   display: flex;
@@ -167,7 +173,8 @@ body main .recherche form .dates {
   justify-content: space-between;
   flex-direction: row;
 }
-body main .recherche form .dates .depart, body main .recherche form .dates .arrivee {
+body main .recherche form .dates .depart,
+body main .recherche form .dates .arrivee {
   width: 48%;
 }
 body main .recherche form label {
@@ -198,6 +205,7 @@ body main .recherche form button {
 }
 body footer {
   padding: 30px;
+  z-index: 10;
 }
 body footer ul {
   display: flex;
@@ -212,6 +220,14 @@ body footer ul li a {
 }
 
 @media screen and (max-width: 768px) {
+  body .background-responsive {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100svw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
   body header {
     margin-bottom: 20px;
     padding: 10px;
@@ -236,13 +252,13 @@ body footer ul li a {
   }
   body main {
     flex-direction: column;
-    padding: 5px;
-    gap: 50px;
+    padding: 10px;
+    gap: 100px;
   }
   body main .gauche {
     padding: 0;
     width: 100%;
-    gap: 20px;
+    gap: 40px;
   }
   body main .gauche h1 {
     font-size: 50px;
@@ -270,13 +286,16 @@ body footer ul li a {
   body main .recherche form h2 {
     font-size: 25px;
   }
-  body main .recherche form label, body main .recherche form input, body main .recherche form button {
-    font-size: 14px;
+  body main .recherche form label,
+  body main .recherche form input,
+  body main .recherche form button {
+    font-size: 16px;
   }
   body main .recherche form .dates {
     flex-direction: column;
   }
-  body main .recherche form .dates .depart, body main .recherche form .dates .arrivee {
+  body main .recherche form .dates .depart,
+  body main .recherche form .dates .arrivee {
     width: 100%;
   }
   body footer {
