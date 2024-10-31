@@ -1,0 +1,324 @@
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  font-family: roboto, arial, sans-serif;
+
+  width: 100svw;
+  min-height: 100svh;
+  background-image: url("../images/fond.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+    .menu-gauche {
+      .menu-responsive {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: space-around;
+        width: 80px;
+        height: 80px;
+        background-color: rgb(86, 219, 86);
+        padding: 15px;
+        .ligne {
+          height: 4px;
+          background-color: #f1f1f1;
+        }
+        .ligne-haut,
+        .ligne-bas {
+          width: 100%;
+        }
+        .ligne-milieu {
+          width: 50%;
+        }
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        li {
+          a {
+            color: #f1f1f1;
+            text-transform: capitalize;
+            font-size: 22px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    .menu-droite {
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        li {
+          a {
+            color: #f1f1f1;
+            text-transform: capitalize;
+            font-size: 22px;
+            font-weight: bold;
+          }
+          &:nth-child(2) {
+            background-color: rgb(86, 219, 86);
+            padding: 5px 10px;
+            border-radius: 4px;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    display: flex;
+    justify-content: space-between;
+    .gauche {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #f1f1f1;
+      width: 50%;
+      padding: 50px 50px 0 50px;
+      position: relative;
+
+      h1 {
+        font-size: 100px;
+        text-transform: capitalize;
+      }
+      .number {
+        position: absolute;
+        top: -43px;
+        left: 50;
+        font-size: 200px;
+        font-weight: bold;
+        color: rgba($color: #fff, $alpha: 0.5);
+      }
+      .description {
+        display: flex;
+        gap: 30px;
+        position: relative;
+        .ligne-verticale {
+          width: 3px;
+          height: 200px;
+          background-color: #fff;
+        }
+        .texte {
+          display: flex;
+          align-items: end;
+          font-size: 18px;
+          width: 50%;
+          overflow: hidden;
+        }
+        span {
+          position: absolute;
+          text-transform: uppercase;
+          font-weight: bold;
+          bottom: 0;
+          right: 0;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-size: 20px;
+          cursor: pointer;
+          .ligne {
+            width: 50px;
+            height: 1px;
+            background-color: #f1f1f1;
+          }
+        }
+      }
+    }
+    .recherche {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      justify-content: center;
+      flex: 1;
+      width: 50%;
+      align-items: center;
+      form {
+        h2 {
+          font-size: 35px;
+        }
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        background-color: #fff;
+        padding: 50px;
+        border-radius: 8px;
+        .entree {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+        }
+        .dates{
+            // // width: 100%;
+            // display: flex;
+            // flex-direction: row;
+            // .arrivee, .depart{
+            //     width: 100%;
+            // }
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            .depart, .arrivee{
+                width: 48%;
+            }
+        }
+        label {
+          text-transform: uppercase;
+          font-size: 18px;
+          font-weight: bold;
+        }
+        input,
+        select {
+          font-size: 16px;
+          height: 40px;
+          padding-left: 15px;
+          outline: none;
+          border: 1px solid #666;
+          border-radius: 4px;
+        }
+        button {
+          width: min-content;
+          padding: 10px 15px;
+          background-color: rgb(86, 219, 86);
+          color: #fff;
+          font-size: 20px;
+          text-transform: uppercase;
+          font-weight: bold;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  footer {
+      padding: 30px;
+    ul {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      li {
+        font-size: 30px;
+        a {
+          color: #f1f1f1;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    header {
+      margin-bottom: 20px;
+      padding: 10px;
+      .menu-gauche {
+        ul {
+          //   flex-direction: column;
+          gap: 10px;
+          .menu-responsive {
+            display: none;
+          }
+
+          li a {
+            font-size: 16px;
+          }
+        }
+      }
+      .menu-droite {
+        ul {
+          // flex-direction: column;
+          gap: 10px;
+          li a {
+            font-size: 16px;
+          }
+          .fas{
+            display: none;
+          }
+        }
+      }
+    }
+
+    main {
+      flex-direction: column;
+      padding: 5px;
+      gap: 50px;
+      .gauche {
+        padding: 0;
+        width: 100%;
+        gap: 20px;
+        h1 {
+          font-size: 50px;
+        }
+        .number {
+          font-size: 73px;
+          top: -22px;
+        }
+        .description {
+          .ligne-verticale {
+            height: auto;
+          }
+          .texte {
+            width: 100%;
+          }
+          span {
+            bottom: -30px;
+          }
+        }
+      }
+      .recherche {
+        width: 100%;
+        form {
+          width: 100%;
+          padding: 10px;
+          h2{
+            font-size: 25px;
+          }
+          label, input, button{
+            font-size: 14px;
+          }
+          .dates{
+            flex-direction: column;
+            .depart, .arrivee{
+                width: 100%;
+            }
+          }
+        }
+      }
+    }
+    footer{
+      padding: 20px;
+      ul{
+          li{
+              a{
+                  i{
+                      font-size: 20px;
+                  }
+              }
+          }
+      }
+    }
+  }
+}

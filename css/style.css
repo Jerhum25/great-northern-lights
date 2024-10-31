@@ -1,0 +1,290 @@
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  font-family: roboto, arial, sans-serif;
+  width: 100svw;
+  min-height: 100svh;
+  background-image: url("../images/fond.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+}
+body header .menu-gauche .menu-responsive {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-around;
+  width: 80px;
+  height: 80px;
+  background-color: rgb(86, 219, 86);
+  padding: 15px;
+}
+body header .menu-gauche .menu-responsive .ligne {
+  height: 4px;
+  background-color: #f1f1f1;
+}
+body header .menu-gauche .menu-responsive .ligne-haut,
+body header .menu-gauche .menu-responsive .ligne-bas {
+  width: 100%;
+}
+body header .menu-gauche .menu-responsive .ligne-milieu {
+  width: 50%;
+}
+body header .menu-gauche ul {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+body header .menu-gauche ul li a {
+  color: #f1f1f1;
+  text-transform: capitalize;
+  font-size: 22px;
+  font-weight: bold;
+}
+body header .menu-droite ul {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+body header .menu-droite ul li a {
+  color: #f1f1f1;
+  text-transform: capitalize;
+  font-size: 22px;
+  font-weight: bold;
+}
+body header .menu-droite ul li:nth-child(2) {
+  background-color: rgb(86, 219, 86);
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+body main {
+  display: flex;
+  justify-content: space-between;
+}
+body main .gauche {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #f1f1f1;
+  width: 50%;
+  padding: 50px 50px 0 50px;
+  position: relative;
+}
+body main .gauche h1 {
+  font-size: 100px;
+  text-transform: capitalize;
+}
+body main .gauche .number {
+  position: absolute;
+  top: -43px;
+  left: 50;
+  font-size: 200px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.5);
+}
+body main .gauche .description {
+  display: flex;
+  gap: 30px;
+  position: relative;
+}
+body main .gauche .description .ligne-verticale {
+  width: 3px;
+  height: 200px;
+  background-color: #fff;
+}
+body main .gauche .description .texte {
+  display: flex;
+  align-items: end;
+  font-size: 18px;
+  width: 50%;
+  overflow: hidden;
+}
+body main .gauche .description span {
+  position: absolute;
+  text-transform: uppercase;
+  font-weight: bold;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+body main .gauche .description span .ligne {
+  width: 50px;
+  height: 1px;
+  background-color: #f1f1f1;
+}
+body main .recherche {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  flex: 1;
+  width: 50%;
+  align-items: center;
+}
+body main .recherche form {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 8px;
+}
+body main .recherche form h2 {
+  font-size: 35px;
+}
+body main .recherche form .entree {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+body main .recherche form .dates {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+body main .recherche form .dates .depart, body main .recherche form .dates .arrivee {
+  width: 48%;
+}
+body main .recherche form label {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+}
+body main .recherche form input,
+body main .recherche form select {
+  font-size: 16px;
+  height: 40px;
+  padding-left: 15px;
+  outline: none;
+  border: 1px solid #666;
+  border-radius: 4px;
+}
+body main .recherche form button {
+  width: min-content;
+  padding: 10px 15px;
+  background-color: rgb(86, 219, 86);
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+body footer {
+  padding: 30px;
+}
+body footer ul {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+body footer ul li {
+  font-size: 30px;
+}
+body footer ul li a {
+  color: #f1f1f1;
+}
+
+@media screen and (max-width: 768px) {
+  body header {
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  body header .menu-gauche ul {
+    gap: 10px;
+  }
+  body header .menu-gauche ul .menu-responsive {
+    display: none;
+  }
+  body header .menu-gauche ul li a {
+    font-size: 16px;
+  }
+  body header .menu-droite ul {
+    gap: 10px;
+  }
+  body header .menu-droite ul li a {
+    font-size: 16px;
+  }
+  body header .menu-droite ul .fas {
+    display: none;
+  }
+  body main {
+    flex-direction: column;
+    padding: 5px;
+    gap: 50px;
+  }
+  body main .gauche {
+    padding: 0;
+    width: 100%;
+    gap: 20px;
+  }
+  body main .gauche h1 {
+    font-size: 50px;
+  }
+  body main .gauche .number {
+    font-size: 73px;
+    top: -22px;
+  }
+  body main .gauche .description .ligne-verticale {
+    height: auto;
+  }
+  body main .gauche .description .texte {
+    width: 100%;
+  }
+  body main .gauche .description span {
+    bottom: -30px;
+  }
+  body main .recherche {
+    width: 100%;
+  }
+  body main .recherche form {
+    width: 100%;
+    padding: 10px;
+  }
+  body main .recherche form h2 {
+    font-size: 25px;
+  }
+  body main .recherche form label, body main .recherche form input, body main .recherche form button {
+    font-size: 14px;
+  }
+  body main .recherche form .dates {
+    flex-direction: column;
+  }
+  body main .recherche form .dates .depart, body main .recherche form .dates .arrivee {
+    width: 100%;
+  }
+  body footer {
+    padding: 20px;
+  }
+  body footer ul li a i {
+    font-size: 20px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
